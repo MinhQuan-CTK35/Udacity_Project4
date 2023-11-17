@@ -1,7 +1,12 @@
 name: My First Workflow
 
 on:
+  # This allows running on-demand
+  workflow_dispatch:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 
@@ -19,4 +24,4 @@ jobs:
         node-version: 18
 
     - name: Print a message
-      run: echo "Hello, world!"
+      run: echo "Test running on demain & event!"
