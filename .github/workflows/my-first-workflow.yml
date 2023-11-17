@@ -6,9 +6,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   build:
@@ -24,4 +21,4 @@ jobs:
         node-version: 18
 
     - name: Print a message
-      run: echo "Test running on demain & event!"
+      run: echo "Update event, remove on demain pull_request!"
